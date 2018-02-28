@@ -12,23 +12,31 @@ public class BasicTests {
     @Test
     public void simpleValidationTest() {
 
-        Assertions.assertTrue(true);
-        Assertions.assertTrue(true, "This should always be true.");
+        boolean alwaysTrue = true;
+
+        Assertions.assertTrue(alwaysTrue);
+        Assertions.assertTrue(alwaysTrue, "This should always be true.");
     }
 
     @Test
     public void negativeValidationTest() {
 
-        Assertions.assertFalse(false);
-        Assertions.assertFalse(false, "Java cannot add properly.");
+        boolean alwaysFalse = false;
+
+        Assertions.assertFalse(alwaysFalse);
+        Assertions.assertFalse(alwaysFalse, "Java cannot add properly.");
     }
 
     @Test
     public void equalsValidationTest() {
 
-        Assertions.assertEquals(100, 100);
-        Assertions.assertEquals("this", "this");
-        Assertions.assertEquals(3.14, 3.14, "Floats should equal each other.");
+        int i = 100;
+        String str = "this";
+        float f = 3.14f;
+
+        Assertions.assertEquals(i, i);
+        Assertions.assertEquals(str, str);
+        Assertions.assertEquals(f, f, "Values should equal each other.");
     }
 
     @Test
