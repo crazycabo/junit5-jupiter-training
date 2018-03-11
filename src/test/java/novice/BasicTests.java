@@ -2,6 +2,7 @@ package novice;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.opentest4j.AssertionFailedError;
 
 /**
  * Created by BRIAN.SMITH on 2/28/2018 at 11:08 AM
@@ -52,6 +53,8 @@ public class BasicTests {
     @Test
     public void forcedFailTest() {
 
-        Assertions.fail("This test always fails.");
+        Assertions.assertThrows(AssertionFailedError.class, () -> {
+            Assertions.fail("This test always fails.");
+        });
     }
 }
