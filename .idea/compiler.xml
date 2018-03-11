@@ -11,8 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="junit5-jupiter-training" target="1.5" />
-      <module name="junit_training" target="1.5" />
+      <module name="junit5-jupiter-training" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
