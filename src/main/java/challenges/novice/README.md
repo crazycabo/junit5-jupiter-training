@@ -8,3 +8,15 @@ This first challenge requires you to assert against the return value of each met
 | Sum of two numbers returns | number |
 | Join two strings into | string |
 | Reverse array of strings | string[] |
+
+### SetUp & TearDown Tests
+Build on the foundation examples by creating a test class with both class and test setup and teardown methods.
+
+1. Create a class setup method and instantiate a new object of the challenge data class.
+2. Create a test setup method to get the next data value.
+3. Create a test teardown method to post the value you used during testing.
+4. Create a class teardown method to log a special message indicating your success.
+5. Create three tests, get the next data value and validate it's new.
+
+The order in which you create the required methods is up to you. Use the above list as a guide.
+Refer to the challenge test class template for additional info.

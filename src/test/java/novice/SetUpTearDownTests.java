@@ -8,14 +8,14 @@ import org.slf4j.LoggerFactory;
  * Created by BRIAN.SMITH on 3/1/2018 at 11:29 AM
  * Project: junit5-jupiter-training
  */
-public class BasicStructureExampleTests {
+public class SetUpTearDownTests {
 
     private static Logger logger;
 
     @BeforeAll
     public static void setUpBeforeAllTests() {
 
-        logger = LoggerFactory.getLogger(BasicStructureExampleTests.class);
+        logger = LoggerFactory.getLogger(SetUpTearDownTests.class);
         logger.debug("Executes once @BeforeAll tests execute.");
     }
 
