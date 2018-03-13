@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by BRIAN.SMITH on 3/1/2018 at 11:29 AM
  * Project: junit5-jupiter-training
+ * Description: Training examples for setup and teardown test methods
  */
 public class SetUpTearDownTests {
 
