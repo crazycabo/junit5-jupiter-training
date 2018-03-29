@@ -4,7 +4,7 @@ package challenges.novice;
  * Created by Brian Smith on 3/10/18.
  * Description:
  */
-public class BasicTestsChallenge {
+public class BasicChallengeData {
 
     public static boolean sumOf(int first, int second, int equals) {
         return first + second == equals;

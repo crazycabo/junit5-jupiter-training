@@ -1,6 +1,6 @@
 package challenges.novice.answers;
 
-import challenges.novice.BasicTestsChallenge;
+import challenges.novice.BasicChallengeData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -17,21 +17,21 @@ public class BasicChallengeTests {
 
     @Test
     public void sumOfOneAndTwoEqualsThreeIsTrue() {
-        Assertions.assertTrue(BasicTestsChallenge.sumOf(1, 2, 3));
+        Assertions.assertTrue(BasicChallengeData.sumOf(1, 2, 3));
     }
 
     @Test
     public void sumOfTwoFivesEqualsTen() {
-        assertEquals(10, BasicTestsChallenge.returnSumOf(5, 5));
+        assertEquals(10, BasicChallengeData.returnSumOf(5, 5));
     }
 
     @Test
     public void twoStringsJoinedEqualsString() {
-        assertEquals("test everything", BasicTestsChallenge.joinString("test ", "everything"));
+        assertEquals("test everything", BasicChallengeData.joinString("test ", "everything"));
     }
 
     @Test
     public void newArrayEqualsOriginalArrayReversed() {
-        assertArrayEquals(new String[] {"c", "b", "a"}, BasicTestsChallenge.returnReversed(new String[] {"a", "b", "c"}));
+        assertArrayEquals(new String[] {"c", "b", "a"}, BasicChallengeData.returnReversed(new String[] {"a", "b", "c"}));
     }
 }
