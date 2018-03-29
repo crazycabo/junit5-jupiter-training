@@ -1,5 +1,6 @@
 package challenges.novice;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -7,15 +8,21 @@ import java.util.Random;
  * Project: junit5-jupiter-training
  * Description: Use these methods with the setup and teardown challenges.
  */
-public class SetUpTearDownTestsChallenge {
+public class SetUpTearDownChallengeData {
 
     private int[] assignedNumbers;
+    private int currentTestNumber;
     private int firstNumber;
     private int secondNumber;
     private int thirdNumber;
 
-    public SetUpTearDownTestsChallenge() {
+    public SetUpTearDownChallengeData() {
         this.assignedNumbers = new int[]{0, 0, 0};
+        this.currentTestNumber = 1;
+    }
+
+    public int getCurrentTestNumber() {
+        return currentTestNumber;
     }
 
     public int getNumber(int number) {
@@ -27,7 +34,7 @@ public class SetUpTearDownTestsChallenge {
                 secondNumber = getRandomNumber(101, 1000);
                 return secondNumber;
             case 3:
-                thirdNumber = getRandomNumber(1001, 10001);
+                thirdNumber = getRandomNumber(1001, 10000);
                 return thirdNumber;
             default:
                 return -1;
@@ -48,14 +55,16 @@ public class SetUpTearDownTestsChallenge {
             default:
                 throw new Error("You did not specify a correct number, 1-3 only");
         }
+
+        currentTestNumber += 1;
     }
 
     public boolean getCompletionStatus() {
-        return assignedNumbers == new int[]{firstNumber, secondNumber, thirdNumber};
+        return Arrays.equals(assignedNumbers, new int[]{firstNumber, secondNumber, thirdNumber});
     }
 
     private int getRandomNumber(int lowerBound, int upperBound) {
         Random rand = new Random();
-        return rand.nextInt(upperBound) + lowerBound;
+        return rand.nextInt(upperBound - lowerBound) + lowerBound;
     }
 }

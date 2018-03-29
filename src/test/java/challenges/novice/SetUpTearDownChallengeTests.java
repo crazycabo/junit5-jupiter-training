@@ -1,5 +1,11 @@
 package challenges.novice;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by BRIAN.SMITH on 3/12/2018 at 12:10 PM
  * Project: junit5-jupiter-training
@@ -9,13 +15,23 @@ package challenges.novice;
  */
 public class SetUpTearDownChallengeTests {
 
-    // SetUp Class
+    static Logger logger;
+    static SetUpTearDownChallengeData challenges;
 
-    // TearDown Class
+    @BeforeAll
+    public static void setUpAllTests() {
+        logger = LoggerFactory.getLogger(SetUpTearDownChallengeTests.class);
+        challenges = new SetUpTearDownChallengeData();
+    }
 
-    // SetUp Test
+    @AfterAll
+    public static void tearDownAllTests() {
+        Assertions.assertTrue(challenges.getCompletionStatus(), "All tests did not execute correctly.");
+    }
 
-    // TearDown Test
+    // Setup Test
+
+    // Tear down Test
 
     // Tests(3)
 }
